@@ -13,6 +13,7 @@
 		A05CBB9F24CABD44003AAD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05CBB9E24CABD44003AAD02 /* Assets.xcassets */; };
 		A05CBBA224CABD44003AAD02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05CBBA124CABD44003AAD02 /* Preview Assets.xcassets */; };
 		A05CBBA524CABD44003AAD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05CBBA324CABD44003AAD02 /* LaunchScreen.storyboard */; };
+		A05CBBAF24CABD7A003AAD02 /* ViewRBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05CBBAE24CABD7A003AAD02 /* ViewRBG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A05CBBA124CABD44003AAD02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A05CBBA424CABD44003AAD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A05CBBA624CABD44003AAD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A05CBBAE24CABD7A003AAD02 /* ViewRBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRBG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A05CBB9824CABD43003AAD02 /* AppDelegate.swift */,
 				A05CBB9A24CABD43003AAD02 /* SceneDelegate.swift */,
 				A05CBB9C24CABD43003AAD02 /* ContentView.swift */,
+				A05CBBAE24CABD7A003AAD02 /* ViewRBG.swift */,
 				A05CBB9E24CABD44003AAD02 /* Assets.xcassets */,
 				A05CBBA324CABD44003AAD02 /* LaunchScreen.storyboard */,
 				A05CBBA624CABD44003AAD02 /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				A05CBB9924CABD43003AAD02 /* AppDelegate.swift in Sources */,
 				A05CBB9B24CABD43003AAD02 /* SceneDelegate.swift in Sources */,
+				A05CBBAF24CABD7A003AAD02 /* ViewRBG.swift in Sources */,
 				A05CBB9D24CABD43003AAD02 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
