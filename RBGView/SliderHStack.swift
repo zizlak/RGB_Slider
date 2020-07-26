@@ -27,19 +27,9 @@ var body: some View {
         .accentColor(accentColor)
         
         TextField("", text: $text) {
-            if let double = Double(self.text) {
-                
-                switch double {
-                case ..<0:
-                    self.sliderValue = 0
-                case 0...255:
-                    self.sliderValue = double
-                default:
-                    self.sliderValue = 255
-                }
-            }
-            self.text = "\(Int(self.sliderValue))"
+            self.setText()
         }
+            
         .multilineTextAlignment(.center)
         .frame(width: 60)
         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -48,6 +38,22 @@ var body: some View {
     }
    .preferredColorScheme(.dark)
 }
+    
+    private func setText() {
+
+        if let double = Double(self.text) {
+            
+            switch double {
+            case ..<0:
+                self.sliderValue = 0
+            case 0...255:
+                self.sliderValue = double
+            default:
+                self.sliderValue = 255
+            }
+        }
+        self.text = "\(Int(self.sliderValue))"
+    }
 }
 
 struct SliderHStack_Previews: PreviewProvider {
