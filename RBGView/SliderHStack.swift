@@ -38,14 +38,12 @@ var body: some View {
 }
     
     private func setText() {
-
-        let double = Double(sliderValue)
             
-            switch double {
+            switch sliderValue {
             case ..<0:
                 self.sliderValue = 0
             case 0...255:
-                self.sliderValue = double
+                break
             default:
                 self.sliderValue = 255
             }
