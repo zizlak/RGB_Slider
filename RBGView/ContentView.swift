@@ -16,11 +16,6 @@ struct ContentView: View {
     @State private var green = 0.0
     @State private var blue = 0.0
     
-    @State private var textRed = "0"
-    @State private var textGreen = "0"
-    @State private var textBlue = "0"
-    
-    
     //MARK: Body
     
     var body: some View {
@@ -32,10 +27,10 @@ struct ContentView: View {
             VStack{
                 ViewRBG(red: red/255, green: green/255, blue: blue/255)
                     .padding(EdgeInsets(top: 20, leading: 0, bottom: 40, trailing: 0))
-                
-                SliderHStack(sliderValue: $red, text: $textRed, accentColor: .red)
-                SliderHStack(sliderValue: $green, text: $textGreen, accentColor: .green)
-                SliderHStack(sliderValue: $blue, text: $textBlue, accentColor: .blue)
+
+                SliderHStack(sliderValue: $red, accentColor: .red)
+                SliderHStack(sliderValue: $green, accentColor: .green)
+                SliderHStack(sliderValue: $blue, accentColor: .blue)
                 Spacer()
             }
         }

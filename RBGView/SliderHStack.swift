@@ -11,7 +11,6 @@ import SwiftUI
 struct SliderHStack: View {
 
 @Binding var sliderValue: Double
-@Binding var text: String
 
 let accentColor: Color
 
@@ -21,12 +20,11 @@ var body: some View {
         Text("\(Int(sliderValue))")
             .frame(width: CGFloat(40))
         
-        Slider(value: $sliderValue, in: 0...255, step: 1.0){_ in
-            self.text = "\(Int(self.sliderValue))"
-        }
+        Slider(value: $sliderValue, in: 0...255, step: 1.0)
         .accentColor(accentColor)
-        
-        TextField("", text: $text) {
+    
+        TextField("", value: $sliderValue, formatter: NumberFormatter())
+        {
             self.setText()
         }
             
@@ -41,7 +39,7 @@ var body: some View {
     
     private func setText() {
 
-        if let double = Double(self.text) {
+        let double = Double(sliderValue)
             
             switch double {
             case ..<0:
@@ -51,13 +49,11 @@ var body: some View {
             default:
                 self.sliderValue = 255
             }
-        }
-        self.text = "\(Int(self.sliderValue))"
     }
 }
 
 struct SliderHStack_Previews: PreviewProvider {
     static var previews: some View {
-        SliderHStack(sliderValue: .constant(23), text: .constant("111"), accentColor: .red)
+        SliderHStack(sliderValue: .constant(23), accentColor: .red)
     }
 }
